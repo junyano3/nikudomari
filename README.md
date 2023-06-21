@@ -20,7 +20,7 @@
 ##　　selling_prices テーブル　<!-- 肉の品質ごとの価格設定のテーブル -->
 | Column              | Type       | Options                        |
 | ------------------- | ---------- | ------------------------------ |
-| selling_price_id    | integer    | null: false                    |  <!-- 肉の品質ごとの価格の一意の識別子 -->
+| selling_price_id    | integer    | null: false                    | <!-- 肉の品質ごとの価格の一意の識別子 -->
 | high_portion        | integer    | null: false                    | <!--肉の品質（特上）の価格 -->
 | good_portion        | integer    | null: false                    | <!--肉の品質（上）の価格 -->
 | normal_portion      | integer    | null: false                    | <!--肉の品質（並）の価格  -->
@@ -38,7 +38,7 @@
 | meat_name           | string     | null: false                    | <!-- 部位の名前（例: タン、ハラミ） -->
 | meat_id             | integer    | null: false                    | <!-- 肉の一意の識別子 -->
 | cut_id              | references | null: false, foreign_key: true | <!-- 部位の識別子（Cutテーブルとの関連） -->
-| total_weight        | integer    | null: false                    | <!-- 肉の総重量 -->
+| total_weight        | integer    | null: false                    | <!-- 仕入れた肉の総重量 -->
 | cost_price          | integer    | null: false                    | <!-- 総重量の原価 -->
 
 
@@ -54,12 +54,14 @@
 | ------------------------------- | --------- | ------------------------------ |
 | cut_id                          | integer   | null: false                    |  <!-- 部位の一意の識別子-->
 | cut_name                        | string    | null: false                    |  <!-- 題名欄担当者や日付を好きに入れる -->
+| yield             	            | integer   | null: false                    | <!-- 実際に販売できる肉の総重量 -->
 | high_quality                    | integer   | null: false                    |  <!-- 肉の品質（特上）のグラム -->
 | good_quality                    | integer   | null: false                    |  <!-- 肉の品質（上）のグラム -->
 | normal_quality                  | integer   | null: false                    |  <!-- 肉の品質（並）のグラム -->
 | bad_quality                     | integer   | null: false                    |  <!-- 肉の品質（下）のグラム -->
 | minced_quality                  | integer   | null: false                    |  <!-- 肉の品質（ミンチ）のグラム -->
 | loss_portion                    | integer   | null: false                    | <!-- ロス -->
+
 | selling_price_id                | references| null: false                    |  <!-- 品質ごとの売価のid(selling_price テーブルとの関連)-->
 | user                            | references| null: false, foreign_key: true |  <!-- 投稿店のユーザーid -->
  
