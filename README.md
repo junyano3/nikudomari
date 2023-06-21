@@ -27,7 +27,8 @@
 | bad_portion         | integer    | null: false                    | <!--肉の品質（下）の価格 -->
 | minced_portion      | integer    | null: false                    | <!--肉の品質（ミンチ）の価格 -->
 
-
+- belongs_to :user
+- has_many :cuts
 
 ## meats テーブル　<!-- 肉の情報 -->
 
