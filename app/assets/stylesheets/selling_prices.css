@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.main {
+  background-color: #e0e0e0;
+  width: calc(100vw - 300px);
+
+}
+
+ 
+.side_group img {
+  width: 300px; /* 画像の幅を調整 */
+  height: 200px; /* 画像の高さを指定（トリミング後の高さ） */
+  object-fit: cover; /* 画像を縦横比を維持したまま表示領域にフィットさせる */
+  object-position: center; /* 画像を表示領域の中央上部に配置 */
+  }
+

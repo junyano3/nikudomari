@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  box-sizing: border-box;
+}
+
+
+.header {
+background-image:url("/assets/nikukemuri.jpg");
+  background-size: cover;
+  background-position: center 80%;  /* 画像を中央下部に配置 */
+
+}
+
+
+.header__bar.row {
+display: flex;
+
+height: 25vh;
+justify-content: space-between;
+align-items: center;
+}
+.header__bar img {
+  width: 300px; /* 画像の幅を調整 */
+  height: auto; /* 高さは自動調整 */
+}
+
