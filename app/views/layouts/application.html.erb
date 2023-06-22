@@ -4,6 +4,7 @@
     <title>Nikudomari</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<script src="../../javascript/channels/index.js"></script>
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +17,8 @@
 
    <header class="header">
       <div class="header__bar row">
-      <div class="grid-6"> <a href="/"> <img src="/assets/nikudomari_rogo.PNG"style="width: 25vw; height: 25vh;" id="root_button" ></a></div>
+
+        <div class="grid-6"> <a href="/"> <img src="/assets/nikudomari_rogo.PNG"style="width: 25vw; height: 25vh;" id="root_button" ></a></div>
           <%# <% if user_signed_in? %>
            <div class="user_nav grid-6">
                  <%# <span><%= "current_user.nickname" %>  
