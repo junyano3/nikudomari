@@ -16,3 +16,24 @@
  * {
   box-sizing: border-box;
 }
+
+
+.header {
+background-image:url("/assets/nikukemuri.jpg");
+  background-size: cover;
+  background-position: center 80%;  /* 画像を中央下部に配置 */
+
+  
+}
+
+
+
+
+.header__bar.row {
+display: flex;
+
+height: 25vh;
+justify-content: space-between;
+align-items: center;
+}
+
