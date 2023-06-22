@@ -34,7 +34,9 @@ justify-content: space-between;
 align-items: center;
 }
 .header__bar img {
-  width: 300px; /* 画像の幅を調整 */
-  height: auto; /* 高さは自動調整 */
-}
+  width: 20vw; /* 画像の幅を調整 */
+  height: 10vh; /* 画像の高さを指定（トリミング後の高さ） */
+  object-fit: cover; /* 画像を縦横比を維持したまま表示領域にフィットさせる */
+  object-position: center; /* 画像を表示領域の中央上部に配置 */
 
+}
