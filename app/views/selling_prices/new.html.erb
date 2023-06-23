@@ -1,0 +1,11 @@
+<h1>New Selling Price</h1>
+
+<%= form_with(model: @selling_price, url: selling_prices_path, local: true) do |form| %>
+  <%= form.label :product_name %>
+  <%= form.text_field :product_name %>
+
+  <%= form.label :price %>
+  <%= form.number_field :price %>
+
+  <%= form.submit "Create Selling Price" %>
+<% end %>
