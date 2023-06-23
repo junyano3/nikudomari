@@ -13,11 +13,12 @@
 ActiveRecord::Schema.define(version: 2023_06_21_113143) do
 
   create_table "selling_prices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "high_portion", default: 0, null: false
-    t.integer "good_portion", default: 0, null: false
-    t.integer "normal_portion", default: 0, null: false
-    t.integer "bad_portion", default: 0, null: false
-    t.integer "minced_portion", default: 0, null: false
+    t.string "product_name", default: "", null: false
+    t.integer "high_portion", null: false
+    t.integer "good_portion", null: false
+    t.integer "normal_portion", null: false
+    t.integer "bad_portion", null: false
+    t.integer "minced_portion", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

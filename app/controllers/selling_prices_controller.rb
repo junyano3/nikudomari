@@ -15,5 +15,9 @@ class SellingPricesController < ApplicationController
       render :new
     end
   end
-
+  
+  private
+  def selling_price_params
+    params.require(:selling_price).permit(:product_name, :high_portion, :good_portion, :normal_portion, :bad_portion, :minced_portion)
+  end
 end
