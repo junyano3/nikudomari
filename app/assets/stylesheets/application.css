@@ -28,7 +28,6 @@ background-image:url("/assets/nikukemuri.jpg");
 
 .header__bar.row {
 display: flex;
-
 height: 25vh;
 justify-content: space-between;
 align-items: center;

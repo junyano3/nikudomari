@@ -21,7 +21,7 @@
         <div class="grid-6"> <a href="/"> <img src="/assets/nikudomari_rogo.PNG"style="width: 25vw; height: 25vh;" id="root_button" ></a></div>
           <% if user_signed_in? %>
            <div class="user_nav grid-6">
-                  <span><%= current_user.nickname %>  
+                  <span><%= current_user.store_name %>  
              <ul class="user__info"> 
               <li>
                <%= link_to "#" do %>
