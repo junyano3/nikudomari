@@ -1,6 +1,10 @@
 <h1>部位ごとの販売価格登録</h1>
 
 <%= form_with(model: @selling_price, url: selling_prices_path, local: true) do |form| %>
+
+<%# エラーメッセージ %>
+    <%= render 'shared/error_messages', model: form.object %>
+
   <%= form.label "部位の名前" %>
    <%= form.text_field :product_name , class:"selling_price-input", id:"selling-price-name",placeholder:"例）和牛タン"%>
 
