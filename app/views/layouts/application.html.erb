@@ -19,27 +19,35 @@
       <div class="header__bar row">
 
         <div class="grid-6"> <a href="/"> <img src="/assets/nikudomari_rogo.PNG"style="width: 25vw; height: 25vh;" id="root_button" ></a></div>
-          <%# <% if user_signed_in? %>
+          <% if user_signed_in? %>
            <div class="user_nav grid-6">
-                 <%# <span><%= "current_user.nickname" %>  
+                  <span><%= current_user.nickname %>  
              <ul class="user__info"> 
               <li>
                <%= link_to "#" do %>
-                <%= image_tag("/assets/tenpo_mypage_button.PNG", alt: "マイページ") %>
+                <%= image_tag("/assets/tenpo_mypage_button.PNG",class: "post", alt: "マイページ") %>
                 <% end %>
                 <%= link_to "#" do %>
-                <%= image_tag("/assets/logout_button.PNG", alt: "ログアウト") %>
+                <%= image_tag("/assets/logout_button.PNG",class: "post", alt: "ログアウト") %>
                 <% end %>
                </li> 
             </ul>
-          <%# </span> %>
+           </span> 
           </div>
-        <%# <% else %> 
-          <%# <div class="grid-6"> %>
-            <%# <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%# <%= link_to "新規登録", new_user_registration_path, class: "post" %>  
-          <%# </div> %>
-        <%# <% end %> 
+         <% else %> 
+           <div class="grid-6"> 
+            <ul class="user__info"> 
+              <li>
+               <%= link_to new_user_session_path do %>
+                <%= image_tag("/assets/login_button.PNG",class: "post", alt: "ログイン") %>
+                <% end %>
+                <%= link_to new_user_registration_path do %>
+                <%= image_tag("/assets/tenpo_new_button.PNG",class: "post", alt: "新規登録") %>
+                <% end %>
+               </li> 
+            </ul>
+           </div> 
+         <% end %> 
       </div>
     </header>
     
