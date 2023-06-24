@@ -23,28 +23,24 @@
            <div class="user_nav grid-6">
                   <span><%= current_user.store_name %>  
              <ul class="user__info"> 
-              <li>
-               <%= link_to "#" do %>
-                <%= image_tag("/assets/tenpo_mypage_button.PNG",class: "post", alt: "マイページ") %>
-                <% end %>
-                <%= link_to "#" do %>
+              <li><%= link_to "#" do %>
+                <%= image_tag("/assets/tenpo_mypage_button.PNG",class: "post", alt: "マイページ") %>  
+                <% end %> </li>
+               <li> <%= link_to "#" do %>
                 <%= image_tag("/assets/logout_button.PNG",class: "post", alt: "ログアウト") %>
-                <% end %>
-               </li> 
+                <% end %></li> 
             </ul>
            </span> 
           </div>
          <% else %> 
            <div class="grid-6"> 
             <ul class="user__info"> 
-              <li>
-               <%= link_to new_user_session_path do %>
+              <li><%= link_to new_user_session_path do %>
                 <%= image_tag("/assets/login_button.PNG",class: "post", alt: "ログイン") %>
-                <% end %>
-                <%= link_to new_user_registration_path do %>
+                <% end %> </li>
+               <li> <%= link_to new_user_registration_path do %>
                 <%= image_tag("/assets/tenpo_new_button.PNG",class: "post", alt: "新規登録") %>
-                <% end %>
-               </li> 
+                <% end %></li> 
             </ul>
            </div> 
          <% end %> 

@@ -41,4 +41,5 @@ align-items: center;
 
 .user__info{
   list-style: none;
+  display: flex;
 }
