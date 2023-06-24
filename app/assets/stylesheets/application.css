@@ -37,5 +37,8 @@ align-items: center;
   height: 10vh; /* 画像の高さを指定（トリミング後の高さ） */
   object-fit: cover; /* 画像を縦横比を維持したまま表示領域にフィットさせる */
   object-position: center; /* 画像を表示領域の中央上部に配置 */
+}
 
+.user__info{
+  list-style: none;
 }
