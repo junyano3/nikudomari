@@ -1,0 +1,27 @@
+<h1>部位ごとの販売価格登録</h1>
+
+<%= form_with(model: @selling_price, url: selling_prices_path, local: true) do |form| %>
+
+<%# エラーメッセージ %>
+    <%= render 'shared/error_messages', model: form.object %>
+
+  <%= form.label "部位の名前" %>
+   <%= form.text_field :product_name , class:"selling_price-input", id:"selling-price-name",placeholder:"例）和牛タン"%>
+
+  <%= form.label "特上" %>
+   <%= form.text_field :high_portion , class:"selling_price-input", id:"high_portion"%>
+
+  <%= form.label "上" %>
+   <%= form.text_field :good_portion , class:"selling_price-input", id:"good_portion"%>
+
+<%= form.label "並" %>
+   <%= form.text_field :normal_portion  , class:"selling_price-input", id:"normal_portion"%>
+
+<%= form.label "下" %>
+   <%= form.text_field :bad_portion , class:"selling_price-input", id:"bad_portion"%>
+
+<%= form.label "ミンチ" %>
+   <%= form.text_field :minced_portion , class:"selling_price-input", id:"minced_portion"%>
+
+  <%= form.submit "登録" %>
+<% end %>

@@ -20,6 +20,7 @@
 ## selling_prices テーブル <!-- 肉の品質ごとの価格設定のテーブル -->
 | Column              | Type       | Options                        |
 | ------------------- | ---------- | ------------------------------ |
+| product_name        | string     | null: false                    | <!-- 部位の名前（例: タン、ハラミ） -->
 | selling_price_id    | integer    | null: false                    | <!-- 肉の品質ごとの価格の一意の識別子 -->
 | high_portion        | integer    | null: false                    | <!--肉の品質（特上）の価格 -->
 | good_portion        | integer    | null: false                    | <!--肉の品質（上）の価格 -->
