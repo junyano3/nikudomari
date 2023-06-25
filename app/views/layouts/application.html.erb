@@ -26,8 +26,8 @@
               <li><%= link_to "#" do %>
                 <%= image_tag("/assets/tenpo_mypage_button.PNG",class: "post", alt: "マイページ") %>  
                 <% end %> </li>
-               <li> <%= link_to "#" do %>
-                <%= image_tag("/assets/logout_button.PNG",class: "post", alt: "ログアウト") %>
+               <li> <%= link_to destroy_user_session_path, method: :delete do %>
+                <%= image_tag("/assets/logout_button.PNG", class: "logout", alt: "ログアウト") %>
                 <% end %></li> 
             </ul>
            </span> 
