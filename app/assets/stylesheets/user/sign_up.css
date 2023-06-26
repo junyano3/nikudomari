@@ -1,0 +1,33 @@
+.field {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+.actions {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.actions-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+.new_user{
+  color: black;
+  background-color: #e0e0e0;
+  font-size: x-large;
+  text-align: center; /* テキストを水平方向にセンターに配置 */
+  margin-left: auto; /* 左側の余白を自動的に計算 */
+  margin-right: auto; /* 右側の余白を自動的に計算 */
+}
