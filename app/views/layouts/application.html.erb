@@ -20,8 +20,8 @@
 
         <div class="grid-6"> <a href="/"> <img src="/assets/nikudomari_rogo.PNG"style="width: 25vw; height: 25vh;" id="root_button" ></a></div>
           <% if user_signed_in? %>
-           <div class="user_nav grid-6">
-                  <span><%= current_user.store_name %>  
+           <div class="user_nav_grid-6">
+                  <span><b class="store-name"><%= current_user.store_name %> </b> 
              <ul class="user__info"> 
               <li><%= link_to "#" do %>
                 <%= image_tag("/assets/tenpo_mypage_button.PNG",class: "post", alt: "マイページ") %>  
