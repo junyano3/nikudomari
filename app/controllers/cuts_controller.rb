@@ -1,0 +1,2 @@
+class CutsController < ApplicationController
+end
