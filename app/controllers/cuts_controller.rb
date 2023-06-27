@@ -9,7 +9,7 @@ class CutsController < ApplicationController
     #   redirect_to selling_prices_path
     # else
     #   render :new
-    # end
+   
   end
 
 end

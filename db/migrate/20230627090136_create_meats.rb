@@ -1,4 +1,6 @@
 class CreateMeats < ActiveRecord::Migration[6.0]
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture
   def change
     create_table :meats do |t|
       t.string :meat_brand  ,                    null: false 
