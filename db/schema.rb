@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_24_025843) do
+ActiveRecord::Schema.define(version: 2023_06_27_032902) do
+
+  create_table "cuts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "cut_name", null: false
+    t.integer "yield", null: false
+    t.integer "high_portion", null: false
+    t.integer "good_portion", null: false
+    t.integer "normal_portion", null: false
+    t.integer "bad_portion", null: false
+    t.integer "minced_portion", null: false
+    t.integer "loss_portion", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "selling_price_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["selling_price_id"], name: "index_cuts_on_selling_price_id"
+    t.index ["user_id"], name: "index_cuts_on_user_id"
+  end
 
   create_table "selling_prices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "product_name", default: "", null: false
@@ -36,4 +53,6 @@ ActiveRecord::Schema.define(version: 2023_06_24_025843) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cuts", "selling_prices"
+  add_foreign_key "cuts", "users"
 end
