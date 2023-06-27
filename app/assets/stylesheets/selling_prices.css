@@ -21,3 +21,26 @@
   object-position: center; /* 画像を表示領域の中央上部に配置 */
   }
 
+.price_title{
+  color: black;
+  background-color: #e0e0e0;
+  font-size: x-large;
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+.selling_prices_form{
+  background-color: #e0e0e0;
+  text-align: center;
+  font-size: x-large;
+}
+
+.selling_price-input{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+

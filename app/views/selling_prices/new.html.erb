@@ -1,6 +1,8 @@
-<h1>部位ごとの販売価格登録</h1>
+<div class ="price_title">
+部位ごとの販売価格登録
+</div>
 
-<%= form_with(model: @selling_price, url: selling_prices_path, local: true) do |form| %>
+<%= form_with(model: @selling_price, url: selling_prices_path, class: 'selling_prices_form',local: true) do |form| %>
 
 <%# エラーメッセージ %>
     <%= render 'shared/error_messages', model: form.object %>
