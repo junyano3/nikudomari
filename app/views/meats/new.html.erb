@@ -8,10 +8,10 @@
   <div class="items-sell-main">
    <%#登録した肉で計算ボタン%>
      <div class="sell-btn-contents">
-    <%=link_to '登録した肉で計算', root_path, class:"back-btn" %>
+    <%=link_to '登録した肉で計算', new_cut_path, class:"back-btn" %>
   </div>
 <%#//登録した肉で計算ボタン%>
-    <h2 class="items-sell-title">肉の処理後のgを入力</h2>
+    <h2 class="items-sell-title">肉のブランド登録</h2>
     <%= form_with model: @meat, local: true do |f| %>
   
   <%# エラーメッセージ %>
