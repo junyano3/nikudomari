@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :selling_prices, only: [:index, :new, :create]
   resources :users, only: [:edit, :update, :destroy]
   resources :cuts,only: [:new, :create]
-  resources :meats,only: [:new, :create]
+  resources :meats,only: [:new, :create,:index]
 end

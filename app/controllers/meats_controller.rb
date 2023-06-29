@@ -13,6 +13,9 @@ class MeatsController < ApplicationController
   end
 end
 
+def index
+  @meats = Meat.all
+end
   private
 
   def meat_params
