@@ -16,6 +16,21 @@ end
 def index
   @meats = Meat.all
 end
+
+def edit
+  if current_user.id == @meat.user_id
+  else
+    redirect_to root_path
+  end
+end
+
+def update
+  if @meat.update(meat_params)
+    redirect_to meat_path
+  else
+    render :edit
+  end
+end
   private
 
   def meat_params
