@@ -1,6 +1,5 @@
 class CreateMeats < ActiveRecord::Migration[6.0]
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :prefecture
+
   def change
     create_table :meats do |t|
       t.string :meat_brand  ,                    null: false 
@@ -8,7 +7,7 @@ class CreateMeats < ActiveRecord::Migration[6.0]
       t.string :meat_name  ,                    null: false 
       t.integer :total_weight  ,                     null: false
       t.integer :cost_price    ,                     null: false
-   
+      t.references :user,                     null: false, foreign_key: true
      
       t.timestamps
     end

@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(version: 2023_06_27_090136) do
     t.string "meat_name", null: false
     t.integer "total_weight", null: false
     t.integer "cost_price", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_meats_on_user_id"
   end
 
   create_table "selling_prices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -65,4 +67,5 @@ ActiveRecord::Schema.define(version: 2023_06_27_090136) do
 
   add_foreign_key "cuts", "selling_prices"
   add_foreign_key "cuts", "users"
+  add_foreign_key "meats", "users"
 end
