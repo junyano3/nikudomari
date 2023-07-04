@@ -1,0 +1,18 @@
+ <div class="contents">
+  <% @meats.each do |meat| %>
+  <div class= meat_content>
+      <span class="name">
+        <%= meat.meat_brand %>
+         <%= meat.prefecture_id %>   <%# 都道府県の名前を表示できる様に %>
+          <%= meat.meat_name %>
+             <%= meat.total_weight %><%="g"%>
+              <%= meat.cost_price %><%="円"%>
+
+        <%# ここに登録した肉の情報のidを一つづつ入れる %>
+
+        <%= link_to '詳細', meat_path(meat.id), method: :get %>
+        <%= link_to 'この肉で計算', meat_path(meat.id), method: :get %>
+      </span>
+    </div>
+  <% end %>
+</div>

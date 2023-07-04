@@ -1,0 +1,67 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('/assets/nikudomari_rogo.PNG' , size: '185x50'), "/" %>
+
+  </header>
+
+
+  <div class="items-sell-main">
+   <%#登録した肉で計算ボタン%>
+     <div class="sell-btn-contents">
+    <%=link_to '登録した肉で計算', meats_path, class:"back-btn" %>
+  </div>
+<%#//登録した肉で計算ボタン%>
+    <h2 class="items-sell-title">肉のブランド登録</h2>
+    <%= form_with model: @meat, local: true do |f| %>
+  
+  <%# エラーメッセージ %>
+      <%= render partial: 'shared/error_messages', locals: { model: @meat }%>
+ 
+ <div class="new-items">
+      <div class="weight-bold-text">
+        肉のブランド名
+        <span class="indispensable">必須</span>
+      </div> <%= f.text_area :meat_brand, class:"items-text", id:"item-name", placeholder:"肉のブランド名や部位名（必須 40文字まで)", maxlength:"40" %>
+    
+  <div class="weight-bold-text">
+          発送元の地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        
+   
+      <div class="weight-bold-text">
+        肉の部位名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :meat_name, class:"items-text", id:"item-name", placeholder:"例）タン、ハラミ" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        総重量 (g表記)
+          <span class="indispensable" >必須</span>
+        </div>
+        <%= f.text_area :total_weight , class:"items-text", id:"item-info", placeholder:"切る前の総重量を入力" %>
+      </div>
+       <div class="items-explain">
+        <div class="weight-bold-text">
+          原価
+          <span class="indispensable" >必須</span>
+        </div>
+        <%= f.text_area :cost_price, class:"items-text", id:"item-info", placeholder:"切る前の肉の原価を入力" %>
+      </div>
+  <%# 追加項目 %>
+
+    </div>
+
+
+ 
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+
+   </div>
+  <% end %>
+</div>

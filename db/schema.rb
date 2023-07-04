@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_27_032902) do
+ActiveRecord::Schema.define(version: 2023_06_27_090136) do
 
   create_table "cuts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "cut_name", null: false
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 2023_06_27_032902) do
     t.bigint "user_id", null: false
     t.index ["selling_price_id"], name: "index_cuts_on_selling_price_id"
     t.index ["user_id"], name: "index_cuts_on_user_id"
+  end
+
+  create_table "meats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "meat_brand", null: false
+    t.integer "prefecture_id", null: false
+    t.string "meat_name", null: false
+    t.integer "total_weight", null: false
+    t.integer "cost_price", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_meats_on_user_id"
   end
 
   create_table "selling_prices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,4 +67,5 @@ ActiveRecord::Schema.define(version: 2023_06_27_032902) do
 
   add_foreign_key "cuts", "selling_prices"
   add_foreign_key "cuts", "users"
+  add_foreign_key "meats", "users"
 end
